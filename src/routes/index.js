@@ -20,6 +20,10 @@ router.get('/login', (request, response) => {
   response.sendFile(path.resolve(__dirname + '/../../views/login/login.html'));
 });
 
+router.get('/home', (request, response) => {
+  response.sendFile(path.resolve(__dirname + '/../../views/home/home.html'));
+});
+
 router.post('/register', registrationController);
 
 router.post('/login', loginController);

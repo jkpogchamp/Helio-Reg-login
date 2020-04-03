@@ -9,16 +9,30 @@
   <body>
     <h1>Registration</h1>
     <form action="/register" method="POST" class="form">
-      <label for="email"><b>E-mail</b></label>
-      <input type="text" placeholder="Enter e-mail" name="email" required />
+      <fieldset>
+        <label for="email"><b>E-mail</b></label>
+        <input type="text" placeholder="Enter e-mail" name="email" required />
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required />
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="psw"
+          required
+        />
 
-      <label for="psw"><b>Password2</b></label>
-      <input type="password" placeholder="Enter Password again" name="psw2" required />
+        <label for="confirm_psw"><b>Confirm password</b></label>
+        <input
+          type="password"
+          placeholder="Please confirm your password"
+          name="confirm_psw"
+          id="confirm_psw"
+          required
+        />
 
-      <button type="submit">Register</button>
+        <button type="submit">Register</button>
+      </fieldset>
     </form>
     <script src="/register/register.js"></script>
   </body>
