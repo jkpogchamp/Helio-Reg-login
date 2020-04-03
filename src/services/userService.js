@@ -4,7 +4,7 @@ const register = (email, password) =>
   new Promise((resolve, reject) => {
     connection.query(
       'SELECT * FROM users WHERE email=?',
-      [username],
+      [email],
       (error, rows) => {
         if (error) {
           reject(error);
@@ -13,7 +13,7 @@ const register = (email, password) =>
         } else {
           connection.query(
             'INSERT INTO users(email, password) VALUES(?,?)',
-            [username, password],
+            [email, password],
             error => {
               if (error) {
                 reject(error);
